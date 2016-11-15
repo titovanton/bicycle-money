@@ -1,0 +1,21 @@
+<form action="{{ YM_ACTION }}" id="money-yandex" method="post">
+
+    <input name="shopId" value="{{ YM_SHOPID }}" type="hidden"/>
+    <input name="scid" value="{{ YM_SCID }}" type="hidden"/>
+    <input name="sum" value="{{ YM_SUM }}.0" type="hidden">
+    <input name="customerNumber" value="{{ YM_CUSTOMERNUMBER }}" type="hidden"/>
+
+    <input name="shopSuccessURL" value="{{ YM_SHOPSUCCESSURL }}" type="hidden"/>
+    <input name="shopFailURL" value="{{ YM_SHOPFAILURL }}" type="hidden"/>
+
+    <input name="cps_phone" value="{{ YM_CPS_PHONE }}" type="hidden"/>
+    <input name="cps_email" value="{{ YM_CPS_EMAIL }}" type="hidden"/>
+    <input name="CustName" value="{{ YM_CUSTNAME }}" size="43" type="hidden">
+
+    <input name="paymentType" value="{{ YM_PAYMENTTYPE }}" type="hidden">
+
+    {% autoescape off %}
+        {{ YM_BUTTON }}
+    {% endautoescape %}
+
+</form>
